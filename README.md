@@ -13,5 +13,5 @@ O pipeline foi desenvolvido de ponta a ponta em ambiente de nuvem na plataforma 
 * **Camada Silver (Limpeza e Qualidade):** Execução da filtragem territorial para Belo Horizonte e padronização da chave primária geográfica (CD_SETOR). Contempla o tratamento de anomalias referentes ao sigilo estatístico do IBGE (presença do caractere "X" em colunas quantitativas), convertendo-os em valores nulos e aplicando tipagem estrita (*cast* para inteiros e *floats*).
 * **Camada Gold (Modelagem Analítica):** Consolidação dos dados em formato desnormalizado e agregado em quatro granulometrias territoriais (setores censitários, bairros, favelas e totalidade do município). Esta camada implementa as regras de negócio para as Cestas de Variáveis, o tratamento de nulos para zero, o cálculo dos seis indicadores temáticos, a normalização contínua com limites globais de 0 a 1 (com inversão metodológica do indicador de analfabetismo) e a apuração da pontuação final do IDS.
 
-## Governança de Dados
+## Catalogação de Dados
 A catalogação e a rastreabilidade do ecossistema foram implementadas nativamente no Unity Catalog. O catálogo registra os metadados com descrições semânticas em nível de tabela e de coluna, além de tags de classificação ("Censo Demográfico 2022" e "IDS").
